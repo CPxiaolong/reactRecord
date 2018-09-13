@@ -1,14 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './asset/css/index.css';
-import App from './component/App';
-import MobxTest from './component/MobxTest';
-import {Router,Route,hashHistory} from 'react-router'
 import registerServiceWorker from './registerServiceWorker';
+import ProjectRouter from './router/Router'
 
-ReactDOM.render((
-	<Router history={hashHistory}>
-    		<Route path="/" component={App}/>
-    </Router>
-), document.getElementById('root'))
+
+ReactDOM.render(<ProjectRouter />, document.getElementById('root'))
 registerServiceWorker();
